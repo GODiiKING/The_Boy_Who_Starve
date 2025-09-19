@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-grey: #1b1b32;
+    --black: #000;
+    --white: #fff;
+    --golden-yellow: #fecc4c;
+    --yellow: #ffcc4c;
+    --gold: #feac32;
+    --orange: #ffac33;
+    --dark-orange: #f89808;
+}
+
+body {
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+h1,
+#result {
+    text-align: center;
+}
+
+h1 {
+    margin: 10px 0 15px;
+}
+
+.story-container {
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+    border-style: double;
+    border-width: 14px;
+    border-color: var(--white);
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 760px) {
+    .btn-container {
+        flex-direction: row;
+    }
+}
+
+#result {
+    margin: 20px auto;
+    max-width: 700px;   /* keeps text from being too wide */
+    font-size: 1.2rem;    /* adjust size (1rem = base size, smaller than 1.2rem) */
+    line-height: 1.6;   /* makes text easier to read */
+    text-align: left;   /* paragraphs are easier to read left-aligned */
+    white-space: pre-line;
+  }
+  
+
+/* container: allow wrapping and spacing */
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* buttons: fixed visual width, text will wrap cleanly */
+  .btn {
+    box-sizing: border-box;
+    cursor: pointer;
+    flex: 0 0 240px;
+    min-height: 68px;
+    padding: 10px 12px;
+    margin: 0;
+    font-size: 0.95rem;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    color: #ffffff;  /* white text for contrast */
+    background-image: linear-gradient(#14051e, #3a1753); /* purple gradient */
+    border: 3px solid #6a0dad; /* purple border */
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-image: linear-gradient(#8a2be2, #6a0dad); /* brighter purple on hover */
+  }
+  
+  
+  /* mobile: make buttons full-width so they stack nicely */
+  @media (max-width: 600px) {
+    .btn {
+      flex: 1 1 100%;
+      min-height: 56px;
+      max-width: none;
+    }
+  }
+  
+
+.btn:hover {
+    background-image: linear-gradient(var(--yellow), var(--dark-orange));
+}
+
